@@ -16,10 +16,17 @@ public class EMailAdressBuch
 
     /**
      * 
+     * 
+     * 
      */
     public EMailAdressBuch()
     {
         this.userList = new HashMap<>();
+    }
+
+    public EMailAdressBuch(EMailAdressBuch e)
+    {
+        this.userList = e.userList;
     }
 
     /**
