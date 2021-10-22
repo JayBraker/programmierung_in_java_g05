@@ -16,7 +16,7 @@ public class EMailAdressBuch
 
     /**
      * 
-     * 
+     * Basic constructor initializes the HashMap.
      * 
      */
     public EMailAdressBuch()
@@ -24,23 +24,33 @@ public class EMailAdressBuch
         this.userList = new HashMap<>();
     }
 
+    /**
+     * Copy-constructor copies the originals HashMap storing names and addresses.
+     * 
+     * @param e original object to be copied
+     */
     public EMailAdressBuch(EMailAdressBuch e)
     {
         this.userList = e.userList;
     }
 
     /**
-     * @param name
-     * @param email
+     * Method einfuegen enters a supplied name, address tuple into the HashMap.
+     * 
+     * @param name supplied name String.
+     * @param email supplied address String.
      */
-    public void einfügen(String name, String email)
+    public void einfuegen(String name, String email)
     {
         this.userList.put(name, email);
     }
 
     /**
-     * @param name
-     * @return
+     * Method abfrage returns the address associated to a given name String. Throws
+     * a custom exception if the name is not stored in the HashMap.
+     * 
+     * @param name supplied name String.
+     * @return address String.
      */
     public String abfrage(String name)
     {
@@ -53,7 +63,8 @@ public class EMailAdressBuch
     }
 
     /**
-     *
+     * Custom toString Method joins every key-value entry in the HashMap to the
+     * following format: {name1=address1, name2=address2, ...}
      */
     public String toString()
     {
@@ -75,8 +86,11 @@ public class EMailAdressBuch
     }
 
     /**
-     * @param dateiname
-     * @throws FileNotFoundException
+     * Method einlesen attempts to read a specified textfile. Expects one
+     * name;address tuple per line.
+     * 
+     * @param dateiname supplied String must be absolute Path to file.
+     * @throws FileNotFoundException if supplied String was not valid.
      */
     public void einlesen(String dateiname) throws FileNotFoundException
     {
@@ -89,7 +103,7 @@ public class EMailAdressBuch
             if (!line.isBlank())
             {
                 String[] entry = line.split(";");
-                this.einfügen(entry[0], entry[1]);
+                this.einfuegen(entry[0], entry[1]);
             }
         }
         sc.close();
