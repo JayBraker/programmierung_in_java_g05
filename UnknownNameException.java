@@ -1,3 +1,7 @@
+/**
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ *
+ */
 public class UnknownNameException extends RuntimeException
 {
     /**
