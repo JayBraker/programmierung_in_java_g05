@@ -1,5 +1,3 @@
-package abgabe3;
-
 public class UnknownNameException extends RuntimeException
 {
     /**
