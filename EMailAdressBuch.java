@@ -25,7 +25,7 @@ public class EMailAdressBuch
     /**
      * Copy-constructor copies the originals HashMap storing names and addresses.
      * 
-     * @param e original object to be copied
+     * @param the original object to be copied
      */
     public EMailAdressBuch(EMailAdressBuch e)
     {
