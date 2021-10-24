@@ -1,7 +1,7 @@
 public class UnknownNameException extends RuntimeException
 {
     /**
-     * 
+     * Custom exception as demanded by specification
      */
     private static final long serialVersionUID = -2342254946845828131L;
 
