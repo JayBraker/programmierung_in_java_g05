@@ -1,3 +1,7 @@
+/**
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ *
+ */
 public class Test
 {
     public static void main(String[] args)
