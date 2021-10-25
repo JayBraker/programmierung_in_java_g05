@@ -34,9 +34,6 @@ public class EMailAdressBuch
 
     /**
      * Method einfuegen enters a supplied name, address tuple into the HashMap.
-     * Because of the nature of a HashMap it is not necessary to check whether a name already exists as a Key:
-     * If the name does not yet exist as a key in the HashMap, a new key-value entry will be entered.
-     * However if the key already exists, the corresponding value will be overwritten by calling userList.put anyway.
      * 
      * @param name supplied name String.
      * @param email supplied address String.
