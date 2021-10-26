@@ -68,7 +68,7 @@ public class EMailAdressBuch
 	 * a custom exception if the name is not stored in the HashMap.
 	 * 
 	 * @param name supplied name String.
-	 * @return address String.
+	 * @return the email associated with the given name as a String.
 	 */
 	public String abfrage(String name)
 	{
