@@ -32,23 +32,22 @@ public class EMailAdressBuch
 		this.emailListe = e.emailListe;
 	}
 
-	/**
+   /**
 	 * Method einfuegen adds the supplied name, address tuple into the HashMap.
 	 * if there is already an entry with the same name, it is simply overwritten and only the email is updated.
 	 * @param name supplied name String.
 	 * @param email supplied address String.
 	 */
-	public void einfuegen(String name, String email)
-	{
-		if (nameIstVorhanden(name))					// Wenn name vorhanden,
-		{
-			emailListe.put(name, email); 			// ueberschreibe den eintrag, indem ein gleicher angelegt wird
-		} else
-		{
-			emailListe.put(name, email); 			// Wenn name nicht vorhanden, dann leg an
-		}
-	}
-
+    public void einfuegen(String name, String email)
+    {
+        /* 
+        * Because of the nature of a HashMap it is not necessary to check whether a name already exists as a Key:
+        * If the name does not yet exist as a key in the HashMap, a new key-value entry will be entered.
+        * However if the key already exists, the corresponding value will be overwritten by calling userList.put anyway.
+        */
+        this.userList.put(name, email);
+    }
+  
 	/**
 	 * Checks if the supplied entry is already in the list, if so, it will return "true" otherwise it will return "false
 	 * 
