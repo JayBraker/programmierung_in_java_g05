@@ -2,6 +2,12 @@ package abgabe4;
 
 public class Quadrat implements Rechenoperation
 {
+    /**
+     * Returns square of any supplied double.
+     * 
+     * @param x Double value to calculate square of.
+     * @return Supplied x squared.
+     */
     @Override
     public double berechne(double x)
     {
