@@ -1,5 +1,9 @@
 package abgabe4;
 
+/**
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ *
+ */
 public class Quadrat implements Rechenoperation
 {
     /**
