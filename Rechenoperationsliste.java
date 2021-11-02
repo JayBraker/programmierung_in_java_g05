@@ -6,11 +6,6 @@ public class Rechenoperationsliste
 {
     private final ArrayList<Rechenoperation> ops;
 
-    public interface Rechenoperation
-    {
-        double berechne(double x);
-    }
-
     public Rechenoperationsliste()
     {
         this.ops = new ArrayList<Rechenoperation>();
