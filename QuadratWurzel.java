@@ -1,6 +1,6 @@
 package abgabe4;
 
-public class QuadratWurzel implements Rechenoperationsliste.Rechenoperation
+public class QuadratWurzel implements Rechenoperation
 {
     @Override
     public double berechne(double x)
