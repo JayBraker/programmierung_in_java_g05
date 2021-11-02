@@ -1,3 +1,5 @@
+package abgabe3;
+
 /**
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
  *
