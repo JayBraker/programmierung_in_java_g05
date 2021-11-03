@@ -15,6 +15,6 @@ public class Quadrat implements Rechenoperation
     @Override
     public double berechne(double x)
     {
-        return Math.pow(x, 2);
+        return Math.pow(x, 2);      // erstes Argument „hoch“ das zweite Argument)
     }
 }
