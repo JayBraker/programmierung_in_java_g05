@@ -16,7 +16,7 @@ public class Addition implements Rechenoperation
      */
     public Addition(double value)
     {
-        this.addV = value;
+        this.addV = value;      //Setzt den zu addierenden Wert auf den uebergebenen 
     }
 
     /**
@@ -27,7 +27,7 @@ public class Addition implements Rechenoperation
     @Override
     public double berechne(double x)
     {
-        return x + addV;
+        return x + addV;    //Gibt x+ addv zurueck
     }
 
 }
