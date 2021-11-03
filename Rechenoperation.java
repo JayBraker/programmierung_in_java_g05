@@ -13,5 +13,5 @@ public interface Rechenoperation
      * @param x Supplied double to perform the operation on.
      * @return Result of the mathematic operation on x.
      */
-    double berechne(double x);
+    double berechne(double x);  // Methode berrechne
 }
