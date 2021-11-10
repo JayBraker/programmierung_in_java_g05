@@ -1,7 +1,7 @@
 package abgabe5;
 
 /**
- * This method implements the "Pavlov" strategy.
+ * This class implements the "Pavlov" strategy.
  * It imperates that the player will cooperate if his action in the last turn matched the action of his opponent.
  * Otherwise if their actions differed, he will betray in the current turn.
  * 
