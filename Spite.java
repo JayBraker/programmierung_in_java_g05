@@ -1,12 +1,23 @@
 package abgabe5;
 
+/**
+ * This class implements the "Spite" strategy.
+ * It imperates that the player will cooperate until the opponent betrays for the first time.
+ * After this, the player will continue to betray every turn until the end of the game.
+ * 
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
+
 public class Spite implements GefangenenStrategie
 {
     private boolean oppLastDec;
-    private boolean lock;
+    private boolean lock; //Lock represents the state in which a player betrays out of spite.
 
     /**
-     * 
+     * Constructor sets the opponents last decision to true
+     * as its given that in the first turn both players cooperate.
+     *
+     * Also the lock attribute is set to false.
      */
     public Spite()
     {
@@ -15,7 +26,7 @@ public class Spite implements GefangenenStrategie
     }
     
     /**
-     *
+     * @return boolean True if the lock attribute is not true.
      */
     @Override
     public boolean getNextDecision()
@@ -30,7 +41,8 @@ public class Spite implements GefangenenStrategie
     }
 
     /**
-     *
+     * Sets the oppLastDec (opponents last decision).
+     * If the opponents last decision was betrayal, it also sets the lock attribute to true.
      */
     @Override
     public void setOpponentsLastDecision(boolean decision)
@@ -38,8 +50,6 @@ public class Spite implements GefangenenStrategie
         this.oppLastDec = decision;
         if (!decision) {
             this.lock = true;
-        }
-        
+        }   
     }
-
 }

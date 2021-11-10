@@ -24,7 +24,16 @@ public class GefangenenDilemma
     {
         Spieler winner = null;
 
-        for (int i = 0; i < n; i++)
+        /*
+         * The first turn is always cooperation by both players.
+         */
+        
+        sp1.addStrafpunkte(2);
+        sp2.addStrafpunkte(2);
+        sp1.setOpponentsLastDecision(true);
+        sp2.setOpponentsLastDecision(true);
+        
+        for (int i = 0; i < n-1; i++) // n-1 as the first turn was predetermined!
         {
             boolean move1 = sp1.getNextMove();
             boolean move2 = sp2.getNextMove();
