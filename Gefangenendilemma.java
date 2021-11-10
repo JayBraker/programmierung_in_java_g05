@@ -29,8 +29,8 @@ public class GefangenenDilemma
         
         sp1.addStrafpunkte(2);
         sp2.addStrafpunkte(2);
-        sp1.setOpponentsLastDecision(move2);
-        sp2.setOpponentsLastDecision(move1);
+        sp1.setOpponentsLastDecision(true);
+        sp2.setOpponentsLastDecision(true);
         
         for (int i = 0; i < n-1; i++) // n-1 as the first turn was predetermined!
         {
