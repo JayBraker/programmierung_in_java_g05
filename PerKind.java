@@ -22,7 +22,7 @@ public class PerKind implements GefangenenStrategie
      */
     public PerKind()
     {
-        this.kindCount = 1;     Setzt den kindCounter auf eins
+        this.kindCount = 1;                 //Setzt den kindCounter auf eins
     }
 
     /**
