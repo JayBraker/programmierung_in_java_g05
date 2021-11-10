@@ -1,7 +1,7 @@
 package abgabe5;
 
 /**
- * This method implements the "Spite" strategy.
+ * This class implements the "Spite" strategy.
  * It imperates that the player will cooperate until the opponent betrays for the first time.
  * After this, the player will continue to betray every turn until the end of the game.
  * 
