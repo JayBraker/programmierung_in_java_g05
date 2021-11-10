@@ -79,7 +79,7 @@ public class Prober implements GefangenenStrategie
             {
                 this.lock2 = true; // If the opponent cooperated and lock1 is already engaged, engage lock2.
             }
-        } else if (!lock2) // After turn 3, iflock2 was not engaged initialize TitForTat strategy and pass
+        } else if (turnCount >= 3 && !lock2) // After turn 3, iflock2 was not engaged initialize TitForTat strategy and pass
                            // opponents last decision.
         {
             if (this.tit == null)
