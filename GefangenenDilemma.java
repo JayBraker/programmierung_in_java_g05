@@ -2,7 +2,7 @@ package abgabe5;
 /**
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
  */
-public class GefangenenDilem
+public class GefangenenDilemma
 {
     private final Spieler sp1;
     private final Spieler sp2;
@@ -11,7 +11,7 @@ public class GefangenenDilem
      * @param strategie1 Strategy for player 1.
      * @param strategie2 Strategy for player 2.
      */
-    public GefangenenDilem(GefangenenStrategie strategie1,
+    public GefangenenDilemma(GefangenenStrategie strategie1,
             GefangenenStrategie strategie2)
     {
         sp1 = new Spieler("Josha", strategie1); // legt den Spieler 1 und siene Strategie fest
