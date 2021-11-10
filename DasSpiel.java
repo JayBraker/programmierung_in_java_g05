@@ -8,7 +8,7 @@ public class DasSpiel
         GefangenenDilemma gd = new GefangenenDilemma(new TitForTat(),
                 new PerKind());
 
-        // 199 mal spielen
+        // 100 mal spielen
         gd.spiele(100);
         
         GefangenenDilemma gd2 = new GefangenenDilemma(new Prober(), new Pavlov());
