@@ -21,7 +21,7 @@ public class PerKind implements GefangenenStrategie
      */
     public PerKind()
     {
-        this.kindCount = 1;
+        this.kindCount = 1;     Setzt den kindCounter auf eins
     }
     
     /**
@@ -36,24 +36,23 @@ public class PerKind implements GefangenenStrategie
     public boolean getNextDecision()
     {
         boolean decision;
-        if (kindCount < 2) {
-            decision = true;
-            kindCount++;
+        if (kindCount < 2) {                // wenn weniger als zweimal koopertiert
+            decision = true;                // kooperiere in diesem zug
+            kindCount++;                    // counter um eins erhoehen
         } else {
-            decision = false;
-            kindCount = 0;
+            decision = false;               // wenn schon kooperiert kooperiere nicht mehr 
+            kindCount = 0;                  // counter wird zurueckgesetzt 
         }
-        return decision;
+        return decision;                    // gebe ergebniss zurueck 
     }
 
     /**
      * Saves the opponents last decision.
+     * @param decision die entscheidung des gegners
      */
     @Override
     public void setOpponentsLastDecision(boolean decision)
     {
         this.oppLastDec = decision;
-        
     }
-
 }
