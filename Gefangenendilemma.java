@@ -5,6 +5,10 @@ public class GefangenenDilemma
     private final Spieler sp1;
     private final Spieler sp2;
 
+    /**
+     * @param strategie1
+     * @param strategie2
+     */
     public GefangenenDilemma(GefangenenStrategie strategie1,
             GefangenenStrategie strategie2)
     {
@@ -12,6 +16,9 @@ public class GefangenenDilemma
         sp2 = new Spieler("Mitja", strategie2);
     }
 
+    /**
+     * @param n
+     */
     public void spiele(int n)
     {
         Spieler winner = null;
@@ -41,7 +48,9 @@ public class GefangenenDilemma
             sp1.setOpponentsLastDecision(move2);
             sp2.setOpponentsLastDecision(move1);
         }
-
+        /*
+         * 
+         */
         if (sp1.getStrafpunkte() < sp2.getStrafpunkte())
         {
             winner = sp1;
@@ -50,6 +59,9 @@ public class GefangenenDilemma
             winner = sp2;
         }
 
+        /*
+         * 
+         */
         System.out.println("Das Spiel ist aus!");
         if (winner != null)
         {

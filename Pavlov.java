@@ -5,16 +5,25 @@ public class Pavlov implements GefangenenStrategie
     private boolean oppLastDec;
     private boolean ownLastDec;
 
+    /**
+     * 
+     */
     public Pavlov()
     {
         this.oppLastDec = true;
         this.ownLastDec = true;
     }
     
+    /**
+     *
+     */
     @Override
     public boolean getNextDecision()
     {
         boolean decision;
+        /*
+         * 
+         */
         if (this.oppLastDec == this.ownLastDec) {
             decision = true;
         } else {
@@ -25,6 +34,9 @@ public class Pavlov implements GefangenenStrategie
         return false;
     }
 
+    /**
+     *
+     */
     @Override
     public void setOpponentsLastDecision(boolean decision)
     {

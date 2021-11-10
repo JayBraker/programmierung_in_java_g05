@@ -5,12 +5,18 @@ public class Spite implements GefangenenStrategie
     private boolean oppLastDec;
     private boolean lock;
 
+    /**
+     * 
+     */
     public Spite()
     {
         this.oppLastDec = true;
         this.lock = false;
     }
     
+    /**
+     *
+     */
     @Override
     public boolean getNextDecision()
     {
@@ -23,6 +29,9 @@ public class Spite implements GefangenenStrategie
         return decision;
     }
 
+    /**
+     *
+     */
     @Override
     public void setOpponentsLastDecision(boolean decision)
     {
