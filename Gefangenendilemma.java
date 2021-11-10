@@ -66,8 +66,8 @@ public class GefangenenDilemma
             
             if(verbose) {
                 System.out.println("Runde "+i);
-                System.out.println("Spieler 1 " + ((move1) ? "kooperiert" : "verrät"));
-                System.out.println("Spieler 2 " + ((move2) ? "kooperiert" : "verrät"));
+                System.out.println("Spieler 1 " + ((move1) ? "kooperiert" : "verrï¿½t"));
+                System.out.println("Spieler 2 " + ((move2) ? "kooperiert" : "verrï¿½t"));
                 System.out.println();
             }
         }
