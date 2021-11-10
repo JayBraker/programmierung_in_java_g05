@@ -23,7 +23,16 @@ public class GefangenenDilemma
     {
         Spieler winner = null;
 
-        for (int i = 0; i < n; i++)
+        /*
+         * The first turn is always cooperation by both players.
+         */
+        
+        sp1.addStrafpunkte(2);
+        sp2.addStrafpunkte(2);
+        sp1.setOpponentsLastDecision(move2);
+        sp2.setOpponentsLastDecision(move1);
+        
+        for (int i = 0; i < n-1; i++) // n-1 as the first turn was predetermined!
         {
             boolean move1 = sp1.getNextMove();
             boolean move2 = sp2.getNextMove();
@@ -70,7 +79,7 @@ public class GefangenenDilemma
         } else
         {
             System.out.println(
-                    "Keiner der Spieler konnte das Spiel für sich entscheiden.\nBeide Spieler erhielten gleichviele Strafpunkte:");
+                    "Keiner der Spieler konnte das Spiel fÃ¼r sich entscheiden.\nBeide Spieler erhielten gleichviele Strafpunkte:");
         }
         System.out.printf("Spieler 1 (\"%s\"): %16d\n", sp1.getName(),
                 sp1.getStrafpunkte());
