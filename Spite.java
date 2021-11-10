@@ -45,6 +45,7 @@ public class Spite implements GefangenenStrategie
     /**
      * Sets the oppLastDec (opponents last decision). If the opponents last decision
      * was betrayal, it also sets the lock attribute to true.
+     * @param decision
      */
     @Override
     public void setOpponentsLastDecision(boolean decision)
