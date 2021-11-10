@@ -20,6 +20,7 @@ public class GefangenenDilemma
      * This Method is responsible to give the Players their points, check who has less points and who in the end won.
      * if a players move is set to true it mean he cooperated if set to false then he betrayed.
      * @param n The numbers of Games that are Played
+
      */
     public void spiele(int n)
     {
@@ -38,7 +39,6 @@ public class GefangenenDilemma
         {
             boolean move1 = sp1.getNextMove(); //Schaut nach was der erste Spieler 
             boolean move2 = sp2.getNextMove();
-
             if (move1 && move2)
             {   //Kooperieren beide Spieler, erhalten beide 2 Strafpunkte.
                 sp1.addStrafpunkte(2);
