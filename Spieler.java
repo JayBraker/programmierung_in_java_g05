@@ -1,5 +1,11 @@
 package abgabe5;
-
+/**
+ * This class implements a participating player.
+ * It gets a GefangenenStrategie on initialization and provides information to the Strategies implementation.
+ * The player also queries the strategy for a decision on the current turn.
+ * 
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
 public class Spieler
 {
     private final GefangenenStrategie strategie;
@@ -8,8 +14,8 @@ public class Spieler
     private int strafpunkte;
 
     /**
-     * @param name
-     * @param strats
+     * @param name The player receives a name to be displayed at the end of the game.
+     * @param strats The player receives a strategy implementation.
      */
     public Spieler(String name, GefangenenStrategie strats)
     {
@@ -19,7 +25,7 @@ public class Spieler
     }
 
     /**
-     * @return
+     * @return String Gives the players name.
      */
     public String getName()
     {
@@ -27,7 +33,7 @@ public class Spieler
     }
 
     /**
-     * @return
+     * @return int Gives the amount of Strafpunkte the player accumulated.
      */
     public int getStrafpunkte()
     {
@@ -35,7 +41,7 @@ public class Spieler
     }
 
     /**
-     * @return
+     * @return boolean Returns the next Decision as imperated by the strategy.
      */
     public boolean getNextMove()
     {
@@ -43,7 +49,7 @@ public class Spieler
     }
 
     /**
-     * @param decision
+     * @param decision Provides the strategy with the opponents last decision.
      */
     public void setOpponentsLastDecision(boolean decision)
     {
@@ -51,7 +57,7 @@ public class Spieler
     }
 
     /**
-     * @param count
+     * @param count Adds a given amount of Strafpunkte to the counter.
      */
     public void addStrafpunkte(int count)
     {
