@@ -1,5 +1,7 @@
 package abgabe5;
-
+/**
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
 public class GefangenenDilemma
 {
     private final Spieler sp1;
