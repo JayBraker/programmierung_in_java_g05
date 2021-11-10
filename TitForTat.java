@@ -23,12 +23,11 @@ public class TitForTat implements GefangenenStrategie
 
     /**
      * Saves the opponents last decision.
+     * @param decision
      */
     @Override
     public void setOpponentsLastDecision(boolean decision)
     {
         this.oppLastDec = decision;
-
     }
-
 }

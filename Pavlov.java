@@ -29,7 +29,7 @@ public class Pavlov implements GefangenenStrategie
     }
 
     /**
-     * Pavlovs decisionmaking compares the last performed actions of both players,
+     * Pavlovs decision making compares the last performed actions of both players,
      * if these match, he will cooperate, otherwise he will betray. He also must
      * save this decision for the next turn.
      *
@@ -52,11 +52,11 @@ public class Pavlov implements GefangenenStrategie
 
     /**
      * Receive information on the opponents action during the last turn.
+     * @param decision
      */
     @Override
     public void setOpponentsLastDecision(boolean decision)
     {
         this.oppLastDec = decision;
     }
-
 }
