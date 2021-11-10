@@ -18,6 +18,17 @@ public class Pavlov implements GefangenenStrategie
     private boolean ownLastDec;
 
     /**
+     * The constructor hat to set own last decision on initialization as knowledge
+     * of its own last move is necessary to determine the next move. As the fist
+     * turn is not determined using getNextDecision, the decision to cooperate must
+     * be memorized this way
+     */
+    public Pavlov()
+    {
+        this.ownLastDec = true;
+    }
+
+    /**
      * Pavlovs decisionmaking compares the last performed actions of both players,
      * if these match, he will cooperate, otherwise he will betray. He also must
      * save this decision for the next turn.
@@ -35,9 +46,8 @@ public class Pavlov implements GefangenenStrategie
         {
             decision = false;
         }
-
-        this.ownLastDec = decision;
-        return false;
+        this.ownLastDec = decision; //Pavlov must remember his own decision for the next turn.
+        return decision;
     }
 
     /**
