@@ -1,8 +1,10 @@
 package abgabe5;
+
 /**
- * This class implements the "Tit For Tat" strategy.
- * It imperates that the player will base his decisions on his opponents last decision.
- * He uses the information on which decision his opponent made in the last turn and copies this decision in the current turn.
+ * This class implements the "Tit For Tat" strategy. It imperates that the
+ * player will base his decisions on his opponents last decision. He uses the
+ * information on which decision his opponent made in the last turn and copies
+ * this decision in the current turn.
  *
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
  */

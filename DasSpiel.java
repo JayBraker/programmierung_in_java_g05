@@ -10,5 +10,9 @@ public class DasSpiel
 
         // 199 mal spielen
         gd.spiele(100);
+        
+        GefangenenDilemma gd2 = new GefangenenDilemma(new Prober(), new Pavlov());
+        
+        gd2.spiele(100);
     }
 }
