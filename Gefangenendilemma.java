@@ -12,12 +12,13 @@ public class GefangenenDilemma
     public GefangenenDilemma(GefangenenStrategie strategie1,
             GefangenenStrategie strategie2)
     {
-        sp1 = new Spieler("Josha", strategie1);
-        sp2 = new Spieler("Mitja", strategie2);
+        sp1 = new Spieler("Josha", strategie1);     // Legt den spieler 1 und seine Strategie fest
+        sp2 = new Spieler("Mitja", strategie2);     // Legt den spieler 2 und seine Strategie fest
     }
 
     /**
-     * @param n
+     * This method evaluates wich move has been played by the players and gives points accordingly
+     * @param n the amount of games
      */
     public void spiele(int n)
     {
@@ -28,20 +29,20 @@ public class GefangenenDilemma
             boolean move1 = sp1.getNextMove();
             boolean move2 = sp2.getNextMove();
 
-            if (move1 && move2)
-            {
+            if (move1 && move2)            
+            {    //  Kooperieren beide Spieler, erhalten beide 2 Strafpunkte
                 sp1.addStrafpunkte(2);
                 sp2.addStrafpunkte(2);
-            } else if (!move1 && !move2)
-            {
+            } else if (!move1 && !move2)    
+            {   // Betrügen beide Spieler, erhalten beide 4 Strafpunkte.
                 sp1.addStrafpunkte(4);
                 sp2.addStrafpunkte(4);
-            } else if (!move1 && move2)
-            {
+            } else if (!move1 && move2)     
+            {   // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
                 sp1.addStrafpunkte(1);
                 sp2.addStrafpunkte(6);
             } else if (move1 && !move2)
-            {
+            {   // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
                 sp1.addStrafpunkte(6);
                 sp2.addStrafpunkte(1);
             }
@@ -49,7 +50,7 @@ public class GefangenenDilemma
             sp2.setOpponentsLastDecision(move1);
         }
         /*
-         * 
+         * This methode 
          */
         if (sp1.getStrafpunkte() < sp2.getStrafpunkte())
         {
@@ -70,7 +71,7 @@ public class GefangenenDilemma
         } else
         {
             System.out.println(
-                    "Keiner der Spieler konnte das Spiel f�r sich entscheiden.\nBeide Spieler erhielten gleichviele Strafpunkte:");
+                    "Keiner der Spieler konnte das Spiel für sich entscheiden.\nBeide Spieler erhielten gleichviele Strafpunkte:");
         }
         System.out.printf("Spieler 1 (\"%s\"): %16d\n", sp1.getName(),
                 sp1.getStrafpunkte());
