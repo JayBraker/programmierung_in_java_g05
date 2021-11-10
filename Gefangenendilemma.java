@@ -17,10 +17,12 @@ public class GefangenenDilemma
     }
 
     /**
-     * This Method is responsible to give the Players their points, check who has less points and who in the end won.
-     * if a players move is set to true it mean he cooperated if set to false then he betrayed.
+     * This Method is responsible to give the Players their points, check who has
+     * less points and who in the end won. if a players move is set to true it mean
+     * he cooperated if set to false then he betrayed.
+     * 
      * @param n The numbers of Games that are Played
-
+     * 
      */
     public void spiele(int n)
     {
@@ -29,45 +31,47 @@ public class GefangenenDilemma
         /*
          * The first turn is always a cooperation by both players.
          */
-        
-        sp1.addStrafpunkte(2);  //Gibt Spieler 1 zwei Strafpunkte
-        sp2.addStrafpunkte(2);  //Gibt Spieler 2 zwei Strafpunkte
+
+        sp1.addStrafpunkte(2); // Gibt Spieler 1 zwei Strafpunkte
+        sp2.addStrafpunkte(2); // Gibt Spieler 2 zwei Strafpunkte
         sp1.setOpponentsLastDecision(true); // Spieler 1 merkt sich die letzte entscheidung von Spieler 1
         sp2.setOpponentsLastDecision(true); // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
-        
-        for (int i = 0; i < n-1; i++) // n-1 as the first turn was predetermined!
+
+        for (int i = 0; i < n - 1; i++) // n-1 as the first turn was predetermined!
         {
-            boolean move1 = sp1.getNextMove(); //Schaut nach was der erste Spieler 
+            boolean move1 = sp1.getNextMove(); // Schaut nach was der erste Spieler
             boolean move2 = sp2.getNextMove();
             if (move1 && move2)
-            {   //Kooperieren beide Spieler, erhalten beide 2 Strafpunkte.
+            { // Kooperieren beide Spieler, erhalten beide 2 Strafpunkte.
                 sp1.addStrafpunkte(2);
                 sp2.addStrafpunkte(2);
             } else if (!move1 && !move2)
-            {   // Betrügen beide Spieler, erhalten beide 4 Strafpunkte
+            { // Betrügen beide Spieler, erhalten beide 4 Strafpunkte
                 sp1.addStrafpunkte(4);
                 sp2.addStrafpunkte(4);
             } else if (!move1 && move2)
-            {   // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
+            { // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende
+              // Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
                 sp1.addStrafpunkte(1);
                 sp2.addStrafpunkte(6);
             } else if (move1 && !move2)
-            {   // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
+            { // Kooperiert ein Spieler und der andere betrügt, so erhält der betrügende
+              // Spieler 1 Strafpunkt, der kooperierende erhält 6 Strafpunkte
                 sp1.addStrafpunkte(6);
                 sp2.addStrafpunkte(1);
             }
-            sp1.setOpponentsLastDecision(move2);    // Spieler 1 merkt sich die letzte entscheidung von Spieler 2
-            sp2.setOpponentsLastDecision(move1);    // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
+            sp1.setOpponentsLastDecision(move2); // Spieler 1 merkt sich die letzte entscheidung von Spieler 2
+            sp2.setOpponentsLastDecision(move1); // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
         }
         /*
          * This part checks who has won the game, the one with less Starfpunkte wins.
          */
         if (sp1.getStrafpunkte() < sp2.getStrafpunkte())
         {
-            winner = sp1;       // Spieler 1 gewinnt
+            winner = sp1; // Spieler 1 gewinnt
         } else if (sp1.getStrafpunkte() > sp2.getStrafpunkte())
         {
-            winner = sp2;       // Spieler 2 gewinnt
+            winner = sp2; // Spieler 2 gewinnt
         }
 
         /*

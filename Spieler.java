@@ -1,7 +1,8 @@
 package abgabe5;
+
 /**
- * This class implements a participating player.
- * It gets a GefangenenStrategie on initialization and provides information to the Strategies implementation.
+ * This class implements a participating player. It gets a GefangenenStrategie
+ * on initialization and provides information to the Strategies implementation.
  * The player also queries the strategy for a decision on the current turn.
  * 
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
@@ -14,7 +15,8 @@ public class Spieler
     private int strafpunkte;
 
     /**
-     * @param name The player receives a name to be displayed at the end of the game.
+     * @param name The player receives a name to be displayed at the end of the
+     * game.
      * @param strats The player receives a strategy implementation.
      */
     public Spieler(String name, GefangenenStrategie strats)

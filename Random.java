@@ -13,7 +13,7 @@ public class Random implements GefangenenStrategie
         this.rand = new java.util.Random();
         this.oppLastDec = true;
     }
-    
+
     /**
      *
      */
@@ -30,7 +30,7 @@ public class Random implements GefangenenStrategie
     public void setOpponentsLastDecision(boolean decision)
     {
         this.oppLastDec = decision;
-        
+
     }
 
 }
