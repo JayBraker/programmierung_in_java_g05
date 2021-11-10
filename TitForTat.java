@@ -23,6 +23,7 @@ public class TitForTat implements GefangenenStrategie
 
     /**
      * Saves the opponents last decision.
+     * 
      * @param decision
      */
     @Override

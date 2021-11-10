@@ -46,12 +46,13 @@ public class Pavlov implements GefangenenStrategie
         {
             decision = false;
         }
-        this.ownLastDec = decision; //Pavlov must remember his own decision for the next turn.
+        this.ownLastDec = decision; // Pavlov must remember his own decision for the next turn.
         return decision;
     }
 
     /**
      * Receive information on the opponents action during the last turn.
+     * 
      * @param decision
      */
     @Override

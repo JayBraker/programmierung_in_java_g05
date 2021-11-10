@@ -1,4 +1,5 @@
 package abgabe5;
+
 /**
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
  */
@@ -65,11 +66,14 @@ public class GefangenenDilemma
             }
             sp1.setOpponentsLastDecision(move2); // Spieler 1 merkt sich die letzte entscheidung von Spieler 2
             sp2.setOpponentsLastDecision(move1); // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
-            
-            if(verbose) {
-                System.out.println("Runde "+i);
-                System.out.println("Spieler 1 " + ((move1) ? "kooperiert" : "verr�t"));
-                System.out.println("Spieler 2 " + ((move2) ? "kooperiert" : "verr�t"));
+
+            if (verbose)
+            {
+                System.out.println("Runde " + i);
+                System.out.println(
+                        "Spieler 1 " + ((move1) ? "kooperiert" : "verr�t"));
+                System.out.println(
+                        "Spieler 2 " + ((move2) ? "kooperiert" : "verr�t"));
                 System.out.println();
             }
         }
