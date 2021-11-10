@@ -37,17 +37,11 @@ public class GefangenenDilemma
         sp1.setOpponentsLastDecision(true); // Spieler 1 merkt sich die letzte entscheidung von Spieler 1
         sp2.setOpponentsLastDecision(true); // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
 
-        for (int i = 0; i < n -1 ; i++) // n-1 as the first turn was predetermined!
+        for (int i = 1; i < n; i++) // i starts at 1 as the first turn was predetermined!
         {
             boolean move1 = sp1.getNextMove(); // Schaut nach was der erste Spieler
             boolean move2 = sp2.getNextMove();
 
-            if(verbose) {
-                System.out.println("Runde "+i);
-                System.out.println("Spieler 1 " + ((move1) ? "kooperiert" : "verrät"));
-                System.out.println("Spieler 2 " + ((move2) ? "kooperiert" : "verrät"));
-                System.out.println();
-            }
             if (move1 && move2)
             { // Kooperieren beide Spieler, erhalten beide 2 Strafpunkte.
                 sp1.addStrafpunkte(2);
@@ -69,6 +63,13 @@ public class GefangenenDilemma
             }
             sp1.setOpponentsLastDecision(move2); // Spieler 1 merkt sich die letzte entscheidung von Spieler 2
             sp2.setOpponentsLastDecision(move1); // Spieler 2 merkt sich die letzte entscheidung von Spieler 1
+            
+            if(verbose) {
+                System.out.println("Runde "+i);
+                System.out.println("Spieler 1 " + ((move1) ? "kooperiert" : "verrät"));
+                System.out.println("Spieler 2 " + ((move2) ? "kooperiert" : "verrät"));
+                System.out.println();
+            }
         }
         /*
          * This part checks who has won the game, the one with less Starfpunkte wins.
