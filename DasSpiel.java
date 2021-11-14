@@ -16,4 +16,4 @@ public class DasSpiel
 
         gd2.spiele(100);
     }
-}fdsöbfsölknsölknds
+}jde    oibdjnjnjnnnnnnnnnnnnnnnnnnnnnnnnnn
