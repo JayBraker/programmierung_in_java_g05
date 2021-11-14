@@ -3,6 +3,8 @@ package abgabe6;
 import java.util.Arrays;
 import java.util.Collections;
 
+public class Blatt{
+
 private final int[] DECK = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 private int[] blatt = new int[3];
 	
