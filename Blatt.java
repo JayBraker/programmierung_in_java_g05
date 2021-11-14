@@ -4,14 +4,16 @@ import java.util.Arrays;
 import java.util.Collections;
 
 private final int[] DECK = {2,3,4,5,6,7,8,9,10,11,12,13,14};
-	private int[] blatt = new int[3];
+private int[] blatt = new int[3];
 	
-	public Blatt(int [] dreiKarten) throws IllegalArgumentException {
-		for( int i=0; i<= DECK.length; i++)
-			for( int j=0; j<=dreiKarten.length; j++) {
-				if(DECK[i]==dreiKarten[j]) {
-					this.blatt[j]=dreiKarten[j];
-				}
+	public Blatt(int [] dreiKarten) throws IllegalArgumentException 
+	{
+	for( int i=0; i<= DECK.length; i++)
+	for( int j=0; j<=dreiKarten.length; j++) 
+		{
+			if(DECK[i]==dreiKarten[j]) 
+			{
+			this.blatt[j]=dreiKarten[j];
 			}
 		}
         zaehlAus();
