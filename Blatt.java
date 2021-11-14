@@ -12,8 +12,8 @@ public class Blatt
 
     public Blatt(int[] dreiKarten) throws IllegalArgumentException
     {
-        for (int i = 0; i <= DECK.length; i++)
-            for (int j = 0; j <= dreiKarten.length; j++)
+        for (int i = 0; i < DECK.length; i++)
+            for (int j = 0; j < dreiKarten.length; j++)
             {
                 if (DECK[i] == dreiKarten[j])
                 {
@@ -25,7 +25,7 @@ public class Blatt
 
     public String toString()
     {
-        return String.format("%d ,%d, %d ", blatt[0], blatt[1], blatt[2]);
+        return String.format("%d, %d, %d ", blatt[0], blatt[1], blatt[2]);
     }
 
     public int[] getBlatt()
