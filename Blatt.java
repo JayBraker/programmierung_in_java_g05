@@ -1,25 +1,31 @@
 package abgabe6;
 
 import java.util.Arrays;
-import java.util.Collections;
 
-private final int[] DECK = {2,3,4,5,6,7,8,9,10,11,12,13,14};
-	private int[] blatt = new int[3];
-	
-	public Blatt(int [] dreiKarten) throws IllegalArgumentException {
-		for( int i=0; i<= DECK.length; i++)
-			for( int j=0; j<=dreiKarten.length; j++) {
-				if(DECK[i]==dreiKarten[j]) {
-					this.blatt[j]=dreiKarten[j];
-				}
-			}
-		}
+public class Blatt
+{
+
+    private final int[] DECK =
+    { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+    private int[] blatt = new int[3];
+    private int[] verteilung;
+
+    public Blatt(int[] dreiKarten) throws IllegalArgumentException
+    {
+        for (int i = 0; i <= DECK.length; i++)
+            for (int j = 0; j <= dreiKarten.length; j++)
+            {
+                if (DECK[i] == dreiKarten[j])
+                {
+                    this.blatt[j] = dreiKarten[j];
+                }
+            }
         zaehlAus();
     }
 
     public String toString()
     {
-        return String.format("%d ,%d, %d ", blatt[0],blatt[1],blatt[2]) ;
+        return String.format("%d ,%d, %d ", blatt[0], blatt[1], blatt[2]);
     }
 
     public int[] getBlatt()
@@ -105,10 +111,11 @@ private final int[] DECK = {2,3,4,5,6,7,8,9,10,11,12,13,14};
         throw new ArithmeticException("Blatt enthält kein Zwilling!");
     }
 
-    public int getSum() {
-        return blatt[0]+blatt[1]+blatt[2];
+    public int getSum()
+    {
+        return blatt[0] + blatt[1] + blatt[2];
     }
-    
+
     public int getMaxWert()
     {
         int[] ret = blatt.clone();
