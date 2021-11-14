@@ -14,15 +14,12 @@ private final int[] DECK = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 				}
 			}
 		}
-	public String toString(){
-		return String.format("%d ,%d, %d ", blatt[0],blatt[1],blatt[2]) ;
-	}
         zaehlAus();
     }
 
     public String toString()
     {
-        return Arrays.toString(this.blatt);
+        return String.format("%d ,%d, %d ", blatt[0],blatt[1],blatt[2]) ;
     }
 
     public int[] getBlatt()
