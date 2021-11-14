@@ -41,7 +41,7 @@ public class BlattVergleich implements Comparator<Blatt>
                 return 1;
             } else if (o1.getSum() > o2.getSum()) {
                 return -1;
-            } else {
+            } else {jbuuhdtxrtrdtdtdd
                 return 0;
             }
         }
