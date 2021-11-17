@@ -9,30 +9,48 @@ public class Blatt
     { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
     private int[] blatt = new int[3];
     private int[] verteilung;
-
-    public Blatt(int[] dreiKarten) throws IllegalArgumentException
-    {
-        for (int i = 0; i < DECK.length; i++)
-            for (int j = 0; j < dreiKarten.length; j++)
-            {
-                if (DECK[i] == dreiKarten[j])
-                {
-                    this.blatt[j] = dreiKarten[j];
-                }
-            }
+    /**
+	 * This method looks if the given parameter values are in the deck, if thats the case it will set the Card.
+	 * if not, it will throw an IllegalArgumentExcpetion.
+	 * 
+	 * @param dreiKarten
+	 * @throws IllegalArgumentException 
+	 */
+    public Blatt(int[] dreiKarten) throws IllegalArgumentException		// uebergebe 3 karten
+	{
+		for (int i = 0; i < DECK.length; i++)							// solange es im bereich des kartendecks ist.
+			for (int j = 0; j < dreiKarten.length; j++)				    // solange <=3 (hand groeße)
+			{
+				if (DECK[i] == dreiKarten[j])							// ist der Wert im Kartendeck
+				{
+					this.blatt[j] = dreiKarten[j];						// setzt die karte 
+				}
+			}
         zaehlAus();
-    }
-
-    public String toString()
+	}
+    
+    /**
+	 * Returns the Value of the Cards as String.
+	 * @return String the values of the cards
+	 */
+    public String toString()    
     {
         return String.format("%d, %d, %d ", blatt[0], blatt[1], blatt[2]);
     }
 
+     /**
+	 * Returns the Value of the hand
+	 * @return int[] the hand
+	 */
     public int[] getBlatt()
     {
         return this.blatt;
     }
 
+     /**
+	 * Gives the players 3 random cards between 2 and 14
+	 * 
+	 */
     public void zaehlAus()
     {
         this.verteilung = new int[13];
@@ -42,6 +60,10 @@ public class Blatt
         }
     }
 
+     /**
+	 *  Checks if the Cards are Drillings
+	 * @return boolean if it is a drilling or not
+	 */
     public boolean isDrilling()
     {
         for (int anzahl : this.verteilung)
@@ -54,6 +76,10 @@ public class Blatt
         return false;
     }
 
+     /**
+	 * Checks if the Cards are zwillings
+	 * @return String the value of the card
+	 */
     public boolean isZwilling()
     {
         for (int anzahl : this.verteilung)
@@ -66,6 +92,10 @@ public class Blatt
         return false;
     }
 
+     /**
+	 * gets the Drilling Value
+	 * @return int the value of the card
+	 */
     public int getDrillingValue()
     {
         if (isDrilling())
@@ -81,6 +111,10 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Drilling!");
     }
 
+     /**
+	 * gets the Zwilling paar
+	 * @return int the values of the cards
+	 */
     public int getZwillingValue()
     {
         if (isZwilling())
@@ -96,6 +130,10 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Zwilling!");
     }
 
+     /**
+	 * Gets the third Card
+	 * @return int the value of the card
+	 */
     public int getThirdCard()
     {
         if (isZwilling())
@@ -111,11 +149,19 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Zwilling!");
     }
 
+     /**
+	 * gets the sum
+	 * @return int the sum
+	 */
     public int getSum()
     {
         return blatt[0] + blatt[1] + blatt[2];
     }
 
+     /**
+	 * Returns the Max value of all the Crads you have
+	 * @return String the values of the cards
+	 */
     public int getMaxWert()
     {
         int[] ret = blatt.clone();
