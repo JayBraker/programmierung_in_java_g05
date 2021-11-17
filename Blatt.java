@@ -32,7 +32,7 @@ public class Blatt
         zaehlAus();
     }
     
-    /*
+    /**
      * @returns String Values of the three cards, comma seperated.
      */
     public String toString()
@@ -40,7 +40,7 @@ public class Blatt
         return String.format("%d, %d, %d", blatt[0], blatt[1], blatt[2]);
     }
 
-    /*
+    /**
      * @returns int[] Deck of 3 cards represented by this class.
      */
     public int[] getBlatt()
@@ -48,7 +48,7 @@ public class Blatt
         return this.blatt;
     }
 
-    /*
+    /**
      * Counts the number of occurances of every card in the blatt attribute,
      * saves the counts in the attribute verteilung, length 13.
      * The index of verteilung + 2 is mapped to the value of each card.
@@ -62,7 +62,7 @@ public class Blatt
         }
     }
 
-    /*
+    /**
      * @returns boolean Checks whether any card in blatt is contained thrice.
      */
     public boolean isDrilling()
@@ -77,7 +77,7 @@ public class Blatt
         return false;
     }
 
-    /*
+    /**
      * @returns boolean Checks whether any card in blatt is contained twice.
      */
     public boolean isZwilling()
@@ -92,7 +92,7 @@ public class Blatt
         return false;
     }
 
-    /*
+    /**
      * @returns boolean The value of the card contained thrice.
      * @throws ArithmeticException if no card is contained thrice.
      */
@@ -111,7 +111,7 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Drilling!");
     }
     
-    /*
+    /**
      * @returns int The value of the card contained twice.
      * @throws ArithmeticException if no card is contained twice.
      */
@@ -130,7 +130,7 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Zwilling!");
     }
 
-    /*
+    /**
      * @returns int The value of the third card in blatt if there also is a pair of the same value.
      * @throws ArithmeticException If no card is contained thrice.
      */
@@ -149,7 +149,7 @@ public class Blatt
         throw new ArithmeticException("Blatt enthält kein Zwilling!");
     }
     
-    /*
+    /**
      * @returns int The sum of values of all cards in blatt..
      */
     public int getSum()
@@ -157,7 +157,7 @@ public class Blatt
         return blatt[0] + blatt[1] + blatt[2];
     }
 
-    /*
+    /**
      * @returns int THe value of the highest card in blatt.
      */
     public int getMaxWert()
