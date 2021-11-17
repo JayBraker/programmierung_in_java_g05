@@ -4,17 +4,18 @@ import java.util.Arrays;
 
 public class Blatt {
 
-  private final int[] DECK = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+  private final int[] DECK = 
+    {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
   private int[] blatt = new int[3];
   private int[] verteilung;
 
   /**
    * The constructor checks the parameter values for validity and saves them in blatt. The parameter
    * must contain 3 integers, each in the range of 2 to 14. If not, it will throw an
-   * IllegalArgumentExcpetion.
+  * IllegalArgumentExcpetion.
    *
    * @param dreiKarten Int Array containing 3 ints representing card values.
-   */
+    */
   public Blatt(int[] dreiKarten) // uebergebe 3 karten
       {
     for (int i = 0; i < DECK.length; i++) // solange es im bereich des kartendecks ist.
@@ -78,7 +79,7 @@ public class Blatt {
    * @return String the value of the card
    */
   public boolean isZwilling() {
-    for (int anzahl : this.verteilung) {
+      for (int anzahl : this.verteilung) {
       if (anzahl == 2) {
         return true;
       }
