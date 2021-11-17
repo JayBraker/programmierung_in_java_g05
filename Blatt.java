@@ -10,10 +10,11 @@ public class Blatt
     private int[] blatt = new int[3];
     private int[] verteilung;
     /**
-	 * This method looks if the given parameter values are in the deck, if thats the case it will set the Card.
-	 * if not, it will throw an IllegalArgumentExcpetion.
+	 * The constructor checks the parameter values for validity and saves them in blatt.
+	 * The parameter must contain 3 integers, each in the range of 2 to 14.
+	 * If not, it will throw an IllegalArgumentExcpetion.
 	 * 
-	 * @param dreiKarten
+	 * @param dreiKarten Int Array containing 3 ints representing card values.
 	 * @throws IllegalArgumentException 
 	 */
     public Blatt(int[] dreiKarten) throws IllegalArgumentException		// uebergebe 3 karten
@@ -30,27 +31,28 @@ public class Blatt
 	}
     
     /**
-	 * Returns the Value of the Cards as String.
-	 * @return String the values of the cards
-	 */
+     * Returns a String representation of blatt.
+     * @return String
+     */
     public String toString()    
     {
         return String.format("%d, %d, %d ", blatt[0], blatt[1], blatt[2]);
     }
 
      /**
-	 * Returns the Value of the hand
+	 * Returns the value of the hand
 	 * @return int[] the hand
 	 */
     public int[] getBlatt()
     {
         return this.blatt;
     }
-
-     /**
-	 * Gives the players 3 random cards between 2 and 14
-	 * 
-	 */
+    
+    /**
+     * Counts the number of occurances of every card in the blatt attribute,
+     * saves the counts in the attribute verteilung, length 13.
+     * The index of verteilung + 2 is mapped to the value of each card.
+     */
     public void zaehlAus()
     {
         this.verteilung = new int[13];
@@ -61,8 +63,8 @@ public class Blatt
     }
 
      /**
-	 *  Checks if the Cards are Drillings
-	 * @return boolean if it is a drilling or not
+	 * Checks if the deck contains three of a kind.
+	 * @return boolean Deck contains three of a kind
 	 */
     public boolean isDrilling()
     {
@@ -77,7 +79,7 @@ public class Blatt
     }
 
      /**
-	 * Checks if the Cards are zwillings
+	 * Checks if the deck contains two of a kind
 	 * @return String the value of the card
 	 */
     public boolean isZwilling()
@@ -93,9 +95,9 @@ public class Blatt
     }
 
      /**
-	 * gets the Drilling Value
-	 * @return int the value of the card
-	 */
+      * Returns the value of the card contained thrice.	 
+      * @return int the value of the card
+      */
     public int getDrillingValue()
     {
         if (isDrilling())
@@ -112,7 +114,7 @@ public class Blatt
     }
 
      /**
-	 * gets the Zwilling paar
+	 * Returns the value of the card contained twice.
 	 * @return int the values of the cards
 	 */
     public int getZwillingValue()
@@ -131,7 +133,7 @@ public class Blatt
     }
 
      /**
-	 * Gets the third Card
+	 * Returns the value of the third card in the deck if it also contains a two of a kind.
 	 * @return int the value of the card
 	 */
     public int getThirdCard()
@@ -150,8 +152,8 @@ public class Blatt
     }
 
      /**
-	 * gets the sum
-	 * @return int the sum
+	 * Gets the sum of all cards values.
+	 * @return int
 	 */
     public int getSum()
     {
@@ -159,7 +161,7 @@ public class Blatt
     }
 
      /**
-	 * Returns the Max value of all the Crads you have
+	 * Returns the value of the highest card in blatt.
 	 * @return String the values of the cards
 	 */
     public int getMaxWert()
