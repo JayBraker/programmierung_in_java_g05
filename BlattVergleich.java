@@ -2,9 +2,27 @@ package abgabe6;
 
 import java.util.Comparator;
 
+/**
+ * This class implements the comparator for objects of Blatt.
+ * It checks the value of two decks of cards according the following demands:
+ *
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
 public class BlattVergleich implements Comparator<Blatt>
 {
 
+    /**    
+     * It checks the value of two decks of cards according the following demands:
+     *
+     * "Drilling schlägt Paar, Paar schlägt komplett unterschiedliche Karten.
+     * Bei 2 Drillingen bzw. Paaren zählt das mit dem höheren Wert.
+     * Bei 2 Paaren mit gleichem Wert zählt die 3. Karte.
+     * Bei komplett unterschiedlichen Karten zählt die Summe der drei Karten."
+     *
+     * @param o1 Object of the class Blatt.
+     * @param o2 Object of the class Blatt.
+     * @returns int Returns 1 if o1's value is higher, 0 if their values are equal, -1 if o2's value is higher.
+     */
     @Override
     public int compare(Blatt o1, Blatt o2)
     {
