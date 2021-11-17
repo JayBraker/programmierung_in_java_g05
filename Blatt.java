@@ -179,6 +179,6 @@ public class Blatt
 	{
 		int[] ret = blatt.clone();
 		Arrays.sort(ret);
-		return ret[-1];
-	}
+        return ret[-1];
+    }
 }
