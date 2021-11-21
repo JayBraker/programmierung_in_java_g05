@@ -35,9 +35,10 @@ jobs:
             sed '/./,$!d' "release/$FILE.tmp"
             mv "release/$FILE.tmp" "release/$FILE"
           done
+          ls -l release/
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
           name: abgabe_05_h.zip
-          path: release/*
+          path: release/
