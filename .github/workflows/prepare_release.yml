@@ -24,19 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Create temp directory for release files
+        run: mkdir release
 
       # Runs a single command using the runners shell
       - name: Remove package declarations and leading blank lines
-        run: |
-          mkdir release
-          for FILE in *.java; do
-            [ -f "$i" ] || break
-            echo "$FILE"
-            tail -n +3 "$FILE" > release/"$FILE.tmp"
-            sed '/./,$!d' release/"$FILE.tmp"
-            mv release/"$FILE.tmp" release/"$FILE"
-          done
-          echo $(ls -l release/)
+        run: for FILE in *.java; do [echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE.tmp"; sed '/./,$!d' release/"$FILE.tmp"; mv release/"$FILE.tmp" release/"$FILE";] done
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
