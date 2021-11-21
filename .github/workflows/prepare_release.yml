@@ -38,5 +38,5 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: abgabe_05_h
+          name: java_05_h
           path: release/
