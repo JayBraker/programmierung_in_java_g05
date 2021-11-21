@@ -33,7 +33,7 @@ jobs:
         run: for FILE in *.java; do echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE"; done
       
       - name: Remove leading blank lines
-        run: for FILE in release/*.java; do sed '/./,$!d' release/"$FILE"; done
+        run: for FILE in release/*.java; do sed '/./,$!d' "$FILE"; done
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
