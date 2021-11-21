@@ -31,6 +31,7 @@ jobs:
           mkdir release
           for FILE in *.java; do
             [ -f "$i" ] || break
+            echo "$FILE"
             tail -n +3 "$FILE" > release/"$FILE.tmp"
             sed '/./,$!d' release/"$FILE.tmp"
             mv release/"$FILE.tmp" release/"$FILE"
