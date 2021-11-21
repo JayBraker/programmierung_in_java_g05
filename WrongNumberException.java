@@ -1,5 +1,11 @@
 package abgabe7;
 
+/**
+ * This Exception may be thrown in the context of an instance of Schiebepuzzle when a given number
+ * was not applicable.
+ *
+ * @author Martin Albertz, Selina Fiorin, Josha Bartsch
+ */
 public class WrongNumberException extends RuntimeException {
 
   /** */
