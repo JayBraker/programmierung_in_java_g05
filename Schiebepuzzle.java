@@ -99,9 +99,13 @@ public class Schiebepuzzle {
     }
     return false;
   }
+  
+  public int getVal(int r, int c) {
+    return this.feld[r][c];
+  }
 
   public void mische() {
-    for (int n = 0; n < 100; ) {
+    for (int n = 0; n < 100;) {
       // nextInt is normally exclusive of the top value,
       // so add 1 to make it inclusive
       int pl = ThreadLocalRandom.current().nextInt(1, 15 + 1);
@@ -110,12 +114,5 @@ public class Schiebepuzzle {
         n++;
       }
     }
-  }
-
-  public static void main(String[] args) {
-    Schiebepuzzle sp = new Schiebepuzzle();
-    System.out.println(sp.toString());
-    sp.mische();
-    System.out.println(sp.toString());
   }
 }
