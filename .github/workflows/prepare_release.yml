@@ -30,7 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Remove package declarations
-        run: for FILE in *.java; do echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE.java"; done
+        run: for FILE in *.java; do echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE"; done
       
       - name: Remove leading blank lines
         run: for FILE in release/*.java; do sed '/./,$!d' release/"$FILE"; done
