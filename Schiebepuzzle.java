@@ -7,7 +7,6 @@ public class Schiebepuzzle {
   public Schiebepuzzle() {
     int[][] feld = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 0}};
     this.feld = feld;
-
   }
 
   public String toString() {
@@ -27,7 +26,7 @@ public class Schiebepuzzle {
 
   public void schiebe(int i) {
     if (!istVerschiebbar(i)) {
-      throw new WrongMoveException("Das Plättchen ist nicht verschiebbar!");
+      throw new WrongMoveException("Das Plï¿½ttchen ist nicht verschiebbar!");
     }
     if (!validNumber(i)) {
       throw new WrongNumberException(
@@ -97,8 +96,6 @@ public class Schiebepuzzle {
     }
     return false;
   }
-
-
 
   public static void main(String[] args) {
     Schiebepuzzle sp = new Schiebepuzzle();
