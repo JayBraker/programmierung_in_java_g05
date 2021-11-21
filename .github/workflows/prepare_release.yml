@@ -29,8 +29,11 @@ jobs:
         run: mkdir release
 
       # Runs a single command using the runners shell
-      - name: Remove package declarations and leading blank lines
-        run: for FILE in *.java; do [echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE.tmp"; sed '/./,$!d' release/"$FILE.tmp"; mv release/"$FILE.tmp" release/"$FILE";] done
+      - name: Remove package declarations
+        run: for FILE in *.java; do echo "$FILE"; tail -n +3 "$FILE" > release/"$FILE.java"; done
+      
+      - name: Remove leading blank lines
+        run: for FILE in release/*.java; do sed '/./,$!d' release/"$FILE"; done
 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
