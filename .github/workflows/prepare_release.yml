@@ -30,23 +30,19 @@ jobs:
         run: |
           for FILE in *.java; do
             [ -f "$i" ] || break
-            mkdir temp
-            tail -n +3 "$FILE" > "temp/$FILE.tmp"
-            sed '/./,$!d' "temp/$FILE.tmp"
-            mv "temp/$FILE.tmp" "temp/$FILE"
+            mkdir release
+            tail -n +3 "$FILE" > "release/$FILE.tmp"
+            sed '/./,$!d' "release/$FILE.tmp"
+            mv "release/$FILE.tmp" "release/$FILE"
           done
 
       - uses: papeloto/action-zip@v1
         with:
-          files: temp/
+          files: release/
           dest: abgabe_05_h.zip
-          
-      - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.36.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
-    
-      - name: Remove temporary files
-        run: |
-          rm -rf temp/
+
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: abgabe_05_h.zip
