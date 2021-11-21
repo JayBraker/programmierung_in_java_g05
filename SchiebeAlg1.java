@@ -24,8 +24,8 @@ public class SchiebeAlg1 implements Loesungsalgorithmus {
         sp.schiebe(pl);
       }
     }
-    System.out
-        .println(String.format("Es hat %d Zufallszahlen gebraucht um zur Loesung zu kommen.", c));
+    System.out.println(
+        String.format("Es hat %d Zufallszahlen gebraucht um zur Loesung zu kommen.", c));
     System.out.println(String.format("Davon waren %d versuchte Zuege zulaessig!\n", cs));
     return;
   }
