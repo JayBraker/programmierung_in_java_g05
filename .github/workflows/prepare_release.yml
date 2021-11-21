@@ -36,13 +36,8 @@ jobs:
             mv "release/$FILE.tmp" "release/$FILE"
           done
 
-      - uses: papeloto/action-zip@v1
-        with:
-          files: release/
-          dest: abgabe_05_h.zip
-
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: abgabe_05_h.zip
+          name: abgabe_05_h.zip
+          path: release
