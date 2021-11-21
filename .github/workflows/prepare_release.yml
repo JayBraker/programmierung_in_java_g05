@@ -28,10 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Remove package declarations and leading blank lines
         run: |
-          mkdir temp
-          tail -n +3 "$FILE" > "temp/$FILE.tmp"
-          sed '/./,$!d' "temp/$FILE.tmp"
-          mv "temp/$FILE.tmp" "temp/$FILE"
+          for FILE in *.java; do
+            [ -f "$i" ] || break
+            mkdir temp
+            tail -n +3 "$FILE" > "temp/$FILE.tmp"
+            sed '/./,$!d' "temp/$FILE.tmp"
+            mv "temp/$FILE.tmp" "temp/$FILE"
+          done
 
       - uses: papeloto/action-zip@v1
         with:
