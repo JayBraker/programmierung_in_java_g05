@@ -1,5 +1,7 @@
 package abgabe7;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Schiebepuzzle {
 
   int[][] feld;
@@ -9,6 +11,7 @@ public class Schiebepuzzle {
     this.feld = feld;
   }
 
+  @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < this.feld.length; i++) {
@@ -96,15 +99,23 @@ public class Schiebepuzzle {
     }
     return false;
   }
+  
+  public void mische() {
+    for(int n = 0; n < 100;) {
+      // nextInt is normally exclusive of the top value,
+      // so add 1 to make it inclusive
+      int pl = ThreadLocalRandom.current().nextInt(1, 15 + 1);
+      if(istVerschiebbar(pl)) {
+        schiebe(pl);
+        n++;
+      }
+    }
+  }
 
   public static void main(String[] args) {
     Schiebepuzzle sp = new Schiebepuzzle();
     System.out.println(sp.toString());
-    System.out.println(sp.istVerschiebbar(15));
-    System.out.println(sp.istVerschiebbar(12));
-    sp.schiebe(15);
-    System.out.println(sp.toString());
-    sp.schiebe(11);
+    sp.mische();
     System.out.println(sp.toString());
   }
 }
