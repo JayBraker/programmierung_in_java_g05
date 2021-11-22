@@ -73,7 +73,7 @@ public class Schiebepuzzle {
    *
    * @param i Value of the slot that shall be validated.
    * @return True if the value is in the range between the highest and lowest value slot, else
-   *     returns false,
+   *     returns false.
    */
   public boolean validNumber(int i) {
     if (i < 0 || i > highestInt) {
@@ -180,7 +180,7 @@ public class Schiebepuzzle {
   public void mische() {
     for (int n = 0; n < 100; ) {
       // nextInt is normally exclusive of the top value,
-      // so add 1 to make it inclusive
+      // so add 1 to make it inclusive.
       int pl = ThreadLocalRandom.current().nextInt(1, highestInt + 1);
       if (istVerschiebbar(pl)) {
         schiebe(pl);
