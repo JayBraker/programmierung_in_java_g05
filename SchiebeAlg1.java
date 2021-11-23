@@ -11,9 +11,8 @@ public class SchiebeAlg1 implements Loesungsalgorithmus {
    */
   @Override
   public void loese(Schiebepuzzle sp) {
-    int c =
-        0; // Counts every iteration, the iteration may be invalid if the chosen slot is not
-           // movable.
+    int c = 0; // Counts every iteration, the iteration may be invalid if the chosen slot is not
+    // movable.
     int cs = 0; // Counts every performed move.
     while (!(sp.getVal(0, 0) == 1)) {
       c++;
