@@ -49,6 +49,7 @@ public class Schiebepuzzle {
     for (int z = 0; z < arrayMitVerschiebbarenZahlen.length; z++) {
       if (arrayMitVerschiebbarenZahlen[z] == i) {
         verschiebbar = true;
+        break;
       }
     }
     return verschiebbar;
