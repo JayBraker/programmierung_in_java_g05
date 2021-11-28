@@ -38,7 +38,7 @@ public class Knight extends Chessman {
     if (Position.isValid(pos.getX() + 2, pos.getY() + 1)) {
       moves.add(new Position(pos.getX() + 2, pos.getY() + 1));
     }
-    
+
     return moves;
   }
 

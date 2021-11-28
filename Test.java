@@ -8,7 +8,7 @@ public class Test {
     rook.moveTo(new Position(4, 1));
     System.out.println(rook);
     System.out.println(rook.getMoveList());
-    
+
     // Test eines Springers
     Knight knight = new Knight(new Position(5, 4));
     System.out.println(knight);
@@ -19,5 +19,4 @@ public class Test {
     System.out.println(knight);
     System.out.println(knight.getMoveList());
   }
-
 }

@@ -1,8 +1,8 @@
 package abgabe8;
 
 public class Position {
-  private final static int maxX = 8;
-  private final static int maxY = 8;
+  private static final int maxX = 8;
+  private static final int maxY = 8;
 
   private int x;
   private int y;
@@ -15,7 +15,7 @@ public class Position {
       throw new WrongMoveException();
     }
   }
-  
+
   public Position(Position pos) {
     this.x = pos.x;
     this.y = pos.y;
@@ -36,7 +36,7 @@ public class Position {
   public int getY() {
     return y;
   }
-  
+
   public boolean equals(Position pos) {
     return ((pos.x == this.x) && (pos.y == this.y));
   }
@@ -47,7 +47,7 @@ public class Position {
     }
     return false;
   }
-  
+
   public String toString() {
     return String.format("(%d/%d)", this.x, this.y);
   }
