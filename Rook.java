@@ -2,6 +2,11 @@ package abgabe8;
 
 import java.util.ArrayList;
 
+/**
+ * Implementation of chessman representing the rook in a game of chess.
+ *
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
 public class Rook extends Chessman {
 
   public Rook(Position pos) {
@@ -9,6 +14,12 @@ public class Rook extends Chessman {
     // TODO Auto-generated constructor stub
   }
 
+  /**
+   * This method returns the fields allowed for the rook. the method returns the move list with the
+   * fields to which the rook can move to.
+   *
+   * @return moves the move list
+   */
   @Override
   public ArrayList<Position> getMoveList() {
     ArrayList<Position> moves = new ArrayList<>();
@@ -30,6 +41,11 @@ public class Rook extends Chessman {
     return moves;
   }
 
+  /**
+   * overwritten toString methode
+   *
+   * @return string with the positions
+   */
   @Override
   public String toString() {
     return String.format("Turm: (%d/%d)", this.getPosition().getX(), this.getPosition().getY());
