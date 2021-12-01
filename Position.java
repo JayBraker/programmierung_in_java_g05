@@ -21,20 +21,12 @@ public class Position {
     this.y = pos.y;
   }
 
-  public Position add(Position pos1) {
-    if (isValid(this.x + pos1.x, this.y + pos1.y)) {
-      return new Position(this.x + pos1.x, this.y + pos1.y);
-    } else {
-      throw new WrongMoveException();
-    }
-  }
-
   public int getX() {
-    return x;
+    return this.x;
   }
 
   public int getY() {
-    return y;
+    return this.y;
   }
 
   public boolean equals(Position pos) {

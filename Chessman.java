@@ -3,6 +3,7 @@ package abgabe8;
 import java.util.ArrayList;
 
 public abstract class Chessman {
+
   private Position position;
   private ArrayList<Position> moves;
 
@@ -11,10 +12,16 @@ public abstract class Chessman {
     this.moves = getMoveList();
   }
 
+  /**
+   * This methode return the Position
+   *
+   * @return the position of the Chessman
+   */
   public Position getPosition() {
     return this.position;
   }
 
+  /** Moves the Chesspiece to the given Position but only if the given position is a valid one. */
   public void moveTo(Position pos) {
     if (canMoveTo(pos)) {
       this.position = pos;
