@@ -1,8 +1,8 @@
 package abgabe8;
 
 /**
- * Custom Exception thrown for illegal moves of any chess piece.
- * (i.e. exceeding borders, ignoring movement patterns).
+ * Custom Exception thrown for illegal moves of any chess piece. (i.e. exceeding borders, ignoring
+ * movement patterns).
  *
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
  */
