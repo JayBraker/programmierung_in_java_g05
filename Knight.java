@@ -2,11 +2,16 @@ package abgabe8;
 
 import java.util.ArrayList;
 
+/**
+ * Implementation of the Chessman, representing the knight in a game of chess.
+ *
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ *
+ */
 public class Knight extends Chessman {
 
   public Knight(Position pos) {
     super(pos);
-    // TODO Auto-generated constructor stub
   }
 
   /**
