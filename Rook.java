@@ -2,6 +2,11 @@ package abgabe8;
 
 import java.util.ArrayList;
 
+/**
+ * Implementation of chessman representing the rook in a game of chess.
+ *
+ * @author Selina Fiorin, Martin Albertz, Josha Bartsch
+ */
 public class Rook extends Chessman {
 
   public Rook(Position pos) {
