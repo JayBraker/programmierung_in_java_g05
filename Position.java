@@ -1,12 +1,24 @@
-package JavaHausaufgaben08;
+package abgabe8;
 
 public class Position {
-  public int x;
-  public int y;
+  private static final int maxX = 8;
+  private static final int maxY = 8;
+
+  private int x;
+  private int y;
 
   public Position(int x, int y) {
-    this.x = x;
-    this.y = y;
+    if (isValid(x, y)) {
+      this.x = x;
+      this.y = y;
+    } else {
+      throw new WrongMoveException();
+    }
+  }
+
+  public Position(Position pos) {
+    this.x = pos.x;
+    this.y = pos.y;
   }
 
   public int getX() {
@@ -16,26 +28,19 @@ public class Position {
   public int getY() {
     return this.y;
   }
-
-  public boolean equals(Position p) {
-    if (this.x == p.x && this.y == p.y) {
-      return true;
-    } else {
-      return false;
-    }
+  
+  public boolean equals(Position pos) {
+    return ((pos.x == this.x) && (pos.y == this.y));
   }
 
   public static boolean isValid(int x, int y) {
-    if (x < 0 && x > 8) {
+    if ((x > 0 && x <= maxX) && (y > 0 && y <= maxY)) {
       return true;
-    } else if (y < 0 && y > 8) {
-      return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
   public String toString() {
-    return String.format("(%d / %d", this.x, this.y);
+    return String.format("(%d/%d)", this.x, this.y);
   }
 }
