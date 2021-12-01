@@ -26,7 +26,7 @@ public class Position {
       throw new WrongMoveException();
     }
   }
-  
+
   /**
    * Copy constructor.
    *
@@ -56,8 +56,7 @@ public class Position {
   }
 
   /**
-   * Compares given position with another object.
-   * Returns true if x- and y-coordinates match.
+   * Compares given position with another object. Returns true if x- and y-coordinates match.
    *
    * @param pos Position to compare to.
    * @return boolean
@@ -67,8 +66,8 @@ public class Position {
   }
 
   /**
-   * Validates a set of x- and y-coordinates.
-   * Uses params maxX and maxY to recognize maximum size of the board (should be 8 for a regular game of chess).
+   * Validates a set of x- and y-coordinates. Uses params maxX and maxY to recognize maximum size of
+   * the board (should be 8 for a regular game of chess).
    *
    * @param x X-coordinate, must be in range of 1 and maxX.
    * @param y Y-coordinate, must be in range of 1 and maxY.
