@@ -11,7 +11,7 @@ public abstract class Chessman {
     this.position = pos;
     this.moves = getMoveList();
   }
-      
+
   /**
    * This methode return the Position
    *
@@ -20,7 +20,7 @@ public abstract class Chessman {
   public Position getPosition() {
     return this.position;
   }
-      
+
   /** Moves the Chesspiece to the given Position but only if the given position is a valid one. */
   public void moveTo(Position pos) {
     if (canMoveTo(pos)) {

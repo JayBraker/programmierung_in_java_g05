@@ -28,7 +28,7 @@ public class Position {
   public int getY() {
     return this.y;
   }
-  
+
   public boolean equals(Position pos) {
     return ((pos.x == this.x) && (pos.y == this.y));
   }
