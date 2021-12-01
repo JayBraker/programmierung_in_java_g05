@@ -10,12 +10,11 @@ public class Rook extends Chessman {
   }
 
   /**
-   * This method returns the fields allowed for the rook. 
-   * the method returns the move list with the fields to which the rook can move to.
+   * This method returns the fields allowed for the rook. the method returns the move list with the
+   * fields to which the rook can move to.
    *
    * @return moves the move list
    */
-  
   @Override
   public ArrayList<Position> getMoveList() {
     ArrayList<Position> moves = new ArrayList<>();
@@ -36,6 +35,7 @@ public class Rook extends Chessman {
 
     return moves;
   }
+
   @Override
   public String toString() {
     return String.format("Turm: (%d/%d)", this.getPosition().getX(), this.getPosition().getY());
