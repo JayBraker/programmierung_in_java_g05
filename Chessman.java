@@ -8,8 +8,8 @@ public abstract class Chessman {
   private ArrayList<Position> moves;
 
   /**
-   * The Constructor sets the position of the Chessman
-   * and gets it's movelist.
+   * The Constructor sets the position of the Chessman and gets it's movelist.
+   *
    * @param pos the position
    */
   public Chessman(Position pos) {
@@ -27,8 +27,8 @@ public abstract class Chessman {
   }
 
   /**
-   * Moves the Chesspiece to the given Position
-   * but only if the given position is a valid one.
+   * Moves the Chesspiece to the given Position but only if the given position is a valid one.
+   *
    * @param pos Current position of the Cheesspiece
    * @return the position of the Chessman
    */
@@ -43,8 +43,9 @@ public abstract class Chessman {
 
   public abstract ArrayList<Position> getMoveList();
 
-   /**
+  /**
    * Checks if the Chesspiece can move to the given position.
+   *
    * @param pos the position of where to go
    * @return true or false
    */
