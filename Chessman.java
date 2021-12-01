@@ -3,12 +3,10 @@ package abgabe8;
 import java.util.ArrayList;
 
 /**
- * Super-class representing a base for every chess piece.
- * Implements movements on the board and other generic interactions.
- * Relies on the individual implementation of getMoveList
+ * Super-class representing a base for every chess piece. Implements movements on the board and
+ * other generic interactions. Relies on the individual implementation of getMoveList
  *
  * @author Selina Fiorin, Martin Albertz, Josha Bartsch
- *
  */
 public abstract class Chessman {
 
@@ -50,8 +48,8 @@ public abstract class Chessman {
   }
 
   /**
-   * Abstract method used to determine every move allowed for the chess piece.
-   * Implementations should respect the individual restrictions on the movent and the current position on the board.
+   * Abstract method used to determine every move allowed for the chess piece. Implementations
+   * should respect the individual restrictions on the movent and the current position on the board.
    */
   public abstract ArrayList<Position> getMoveList();
 
