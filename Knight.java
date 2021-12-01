@@ -9,9 +9,10 @@ public class Knight extends Chessman {
     // TODO Auto-generated constructor stub
   }
 
-   /**
-   * This method returns the fields allowed for the knight.
-   * the method returns the move list with the fields to which the knight can move to.
+  /**
+   * This method returns the fields allowed for the knight. the method returns the move list with
+   * the fields to which the knight can move to.
+   *
    * @return moves the move list
    */
   @Override
@@ -47,8 +48,9 @@ public class Knight extends Chessman {
     return moves;
   }
 
-   /**
+  /**
    * overwritten toString methode
+   *
    * @return string with the positions
    */
   @Override
