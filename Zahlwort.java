@@ -4,13 +4,10 @@ import java.util.HashMap;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-/**
- * @author Selina Fiorin, Josha Bartsch
- *
- */
+/** @author Selina Fiorin, Josha Bartsch */
 public class Zahlwort {
 
-  private final static int MAXPOSINT = 9999; // Maximum allowed integer, defined by task
+  private static final int MAXPOSINT = 9999; // Maximum allowed integer, defined by task
   private static HashMap<Integer, String> digits, digits2; // Map int to Strings
 
   static {
@@ -51,7 +48,7 @@ public class Zahlwort {
    * This method takes any integer and returns the worded representation as a String. It determines
    * whether the integer is within range of the defined boundary (MAXPOSINT). Then, piece by piece
    * it assembles the String representation.
-   * 
+   *
    * @param x Integer to be converted.
    * @return String representation of x.
    */
