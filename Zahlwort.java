@@ -3,7 +3,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Zahlwort{
+public class Zahlwort {
 
     private final static String[] einerAnom = {"null","eins"}; // Inconsistent wording for single digits
     private final static String[] zehnerAnom = {"elf","zwoelf"}; // Inconsistent wording for decimals
@@ -73,10 +73,6 @@ public class Zahlwort{
                 } else {
                     retArr[0] = "";
                 }
-            }
-            retArr[1] = String.valueOf(c);
-            return retArr;
-        });
 
         characterStream.forEach(s -> {
             if (Integer.valueOf(s[1]) == sLen-2) {                
