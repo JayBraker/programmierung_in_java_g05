@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 public class Zahlwort {
 
-  private final static int MAXPOSINT = 9999;
+  private static final int MAXPOSINT = 9999;
   private static HashMap<Integer, String> digits, digits2;
 
   static {
@@ -59,7 +59,7 @@ public class Zahlwort {
     } else if (input.length() >= 2) {
       if (input.length() == 4) {
         ret += digits.get(Integer.valueOf(input.substring(0, 1))) + "tausend";
-        if (!input.substring(1,2).equals("0")) {
+        if (!input.substring(1, 2).equals("0")) {
           ret += digits.get(Integer.valueOf(input.substring(1, 2))) + "hundert";
         }
       }
@@ -68,16 +68,17 @@ public class Zahlwort {
       }
       if (Integer.valueOf(input.substring(input.length() - 2, input.length())) < 20) {
         ret += digits.get(Integer.valueOf(input.substring(input.length() - 2, input.length())));
-        String lastTwo = input.substring(input.length()-2, input.length());
+        String lastTwo = input.substring(input.length() - 2, input.length());
         if (lastTwo.equals("01")) {
           ret += "s";
         }
       } else {
         if (!input.substring(input.length() - 1).equals("0")) {
-            ret += digits.get(Integer.valueOf(input.substring(input.length() - 1, input.length())));
-            ret += "und";
+          ret += digits.get(Integer.valueOf(input.substring(input.length() - 1, input.length())));
+          ret += "und";
         }
-        ret += digits2.get(Integer.valueOf(input.substring(input.length() - 2, input.length() - 1)));
+        ret +=
+            digits2.get(Integer.valueOf(input.substring(input.length() - 2, input.length() - 1)));
       }
     }
     return ret;
