@@ -1,3 +1,5 @@
+package abgabe10;
+
 import java.util.stream.Stream;
 
 public class ZahlwortTest {
