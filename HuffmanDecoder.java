@@ -3,16 +3,13 @@ package abgabe11;
 import java.io.*;
 import java.util.HashMap;
 
-/**
- * @author Selina Fiorin, Josha Bartsch
- *
- */
+/** @author Selina Fiorin, Josha Bartsch */
 public class HuffmanDecoder {
   /**
    * This method first determines whether the file meets the expected format (exactly 28 lines).
    * Then it generates the translation table. Finally it reads the encoded message and translates
    * it.
-   * 
+   *
    * @param f File Object of the file to be translated.
    * @return Decoded String
    */
@@ -48,8 +45,7 @@ public class HuffmanDecoder {
 
   /**
    * Method to build the translation table from a given input file.
-   * 
-   * 
+   *
    * @param f
    * @return
    * @throws IOException
@@ -83,8 +79,7 @@ public class HuffmanDecoder {
     BufferedReader reader;
     reader = new BufferedReader(new FileReader(f));
     int lines = 0;
-    while (reader.readLine() != null)
-      lines++;
+    while (reader.readLine() != null) lines++;
     reader.close();
     if (lines == 28) {
       return true;
