@@ -47,12 +47,13 @@ public class HuffmanDecoder {
   }
 
   /**
-   * Method to build the translation table from a given input file.
+   * Method to build the translation table from a given input file. Build a key-value map. Keys are
+   * the binary representation, huffman encoded characters. Values are the decoded characters
+   * derived from the provided file.
    * 
-   * 
-   * @param f
-   * @return
-   * @throws IOException
+   * @param f File Object of the file to be translated.
+   * @return HashMap containing translation binary to char.
+   * @throws IOException All IO errors are handled in decode()
    */
   public static HashMap<String, Character> buildDecodeTable(File f) throws IOException {
     BufferedReader reader;
@@ -64,13 +65,16 @@ public class HuffmanDecoder {
     line = reader.readLine();
     while (line != null) {
       lines++;
-      if (!line.equals("")) {
-        if (lines > 1 && lines < 28) {
-          int integer = (lines + 63);
+      if (!line.equals("")) { // Empty lines indicate the character won't be used so we must ignore
+                              // those
+        if (lines > 1 && lines < 28) { // First line contains the encoded String, following 26 lines
+                                       // characters A-Z, line 28
+          int integer = (lines + 63); // line 2 has to be mapped to char 'A' - Int 65 so we use
+                                      // offset 63
           char character = (char) integer;
           decodeTable.put(line, character);
         } else if (lines == 28) {
-          decodeTable.put(line, (char) 32);
+          decodeTable.put(line, (char) 32); // Line 28 contains the encoded space
         }
       }
       line = reader.readLine();
@@ -79,6 +83,13 @@ public class HuffmanDecoder {
     return decodeTable;
   }
 
+  /**
+   * Checks if the file meets expected line count of 28.
+   * 
+   * @param f File object to check
+   * @return boolean
+   * @throws IOException All IO errors are handled in decode()
+   */
   public static boolean fileIntegrityCheck(File f) throws IOException {
     BufferedReader reader;
     reader = new BufferedReader(new FileReader(f));
