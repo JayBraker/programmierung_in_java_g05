@@ -77,7 +77,7 @@ public class PositiveNumber {
   public String getDecimal() {
     StringBuilder ret = new StringBuilder();
     int tmpValue = value;
-    while(tmpValue > 0) {
+    while (tmpValue > 0) {
       ret.append(tmpValue % 10);
       tmpValue /= 10;
     }
