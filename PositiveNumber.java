@@ -32,11 +32,11 @@ public class PositiveNumber {
         tTmpValue += (chars[i] - 48) * Math.pow(10, s.length() - i - 1);
       } else {
         throw new NumberFormatException(); // Throw NumberFormatException if a character is not
-                                           // matching the expected base (other than 0-9)
+        // matching the expected base (other than 0-9)
       }
       if (Integer.MAX_VALUE - tmpValue < tTmpValue) {
         throw new ArithmeticException(); // Throw ArithmeticException if the resulting value becomes
-                                         // greater than 2^32-1
+        // greater than 2^32-1
       } else {
         tmpValue += tTmpValue;
       }
@@ -59,11 +59,11 @@ public class PositiveNumber {
         tTmpValue += (chars[i] - CHAR_INT_OFFSET) * Math.pow(16, s.length() - i - 1);
       } else {
         throw new NumberFormatException(); // Throw NumberFormatException if a character is not
-                                           // matching the expected base (other than 0-F)
+        // matching the expected base (other than 0-F)
       }
       if (Integer.MAX_VALUE - tmpValue < tTmpValue) {
         throw new ArithmeticException(); // Throw ArithmeticException if the resulting value becomes
-                                         // greater than 2^32-1
+        // greater than 2^32-1
       } else {
         tmpValue += tTmpValue;
       }
@@ -81,11 +81,11 @@ public class PositiveNumber {
         tTmpValue += (chars[i] - CHAR_INT_OFFSET) * Math.pow(2, s.length() - i - 1);
       } else {
         throw new NumberFormatException(); // Throw NumberFormatException if a character is not
-                                           // matching the expected base (other than 0 or 1)
+        // matching the expected base (other than 0 or 1)
       }
       if (Integer.MAX_VALUE - tmpValue
           < tTmpValue) { // Throw ArithmeticException if the resulting value becomes greater than
-                         // 2^32-1
+        // 2^32-1
         throw new ArithmeticException();
       } else {
         tmpValue += tTmpValue;
